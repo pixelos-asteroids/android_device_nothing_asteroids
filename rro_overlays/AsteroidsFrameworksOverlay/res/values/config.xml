@@ -80,7 +80,12 @@
     </integer-array>
 
     <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx.
-         0 = Natural, 1 = Boosted, 2 = Saturated, 3 = Automatic, 260 = Alive (default). -->
+         0   = Natural   (sRGB/D65 accurate)
+         1   = Boosted   (enhanced saturation, software)
+         2   = Saturated (vivid, software)
+         3   = Automatic (Adaptive - ambient-aware, QDCM-backed)
+         260 = Alive     (vendor QDCM preset, default)
+    -->
     <integer-array name="config_availableColorModes">
         <item>260</item>
         <item>0</item>
