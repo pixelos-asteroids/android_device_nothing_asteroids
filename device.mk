@@ -449,7 +449,7 @@ $(call soong_config_set,nothing_sensors,tp_udfps_path,$(TP_SYSFS_PATH)/fts_fod_p
 $(call soong_config_set,nothing_sensors,tp_udfps_enabled_path,$(TP_SYSFS_PATH)/fts_fod_enabled)
 
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.asteroids-multihal \
+    android.hardware.sensors-service.nothing-multihal \
     sensors.nothing \
     sensors.dynamic_sensor_hal
 
