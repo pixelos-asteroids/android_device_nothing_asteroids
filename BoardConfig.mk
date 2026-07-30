@@ -117,8 +117,8 @@ BOARD_KERNEL_CMDLINE := \
     firmware_class.path=/vendor/firmware,/vendor/firmware_mnt/image \
     log_buf_len=1M \
     nosoftlockup \
-    qcom_geni_serial.con_enabled=0 \
-    video=vfb:640x400,bpp=32,memsize=3072000
+    qcom_geni_serial.con_enabled=0
+    
 BOARD_BOOTCONFIG := \
     androidboot.console=0 \
     androidboot.hardware=qcom \
