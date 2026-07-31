@@ -11,3 +11,6 @@
 
 # Lights
 /dev/led_strips   0664   system   system
+
+# Vibrator
+/dev/ics_sfdc   0660   system   system

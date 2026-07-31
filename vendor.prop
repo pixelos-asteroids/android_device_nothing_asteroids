@@ -183,6 +183,9 @@ vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=1
 
+# Vibrator
+vendor.vibrator.device=/dev/aac_richtap
+
 # Wi-Fi
 wifi.aware.interface=wifi-aware0
 

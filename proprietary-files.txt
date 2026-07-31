@@ -1704,6 +1704,7 @@ vendor/firmware/100_Haptic.bin
 vendor/firmware/101_Haptic.bin
 vendor/firmware/haptic_config.bin
 vendor/lib64/libaacvibrator.so
+vendor/lib64/libics_haptic.so
 
 # Video
 vendor/lib64/libvideooptfeature.so
