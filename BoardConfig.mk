@@ -12,8 +12,6 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 
 
-include hardware/nothing/config.mk
-
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
@@ -227,6 +225,7 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 100
 TARGET_USERIMAGES_USE_F2FS := true
 
 # SELinux
+include hardware/nothing/config.mk
 include device/lineage/sepolicy/common/sepolicy.mk
 include device/lineage/sepolicy/qcom/sepolicy.mk
 include device/qcom/sepolicy_vndr/SEPolicy.mk
