@@ -22,23 +22,12 @@
 /vendor/lib64/libnoteengine\.so                                     u:object_r:same_process_hal_file:s0
 /vendor/lib64/libmpbase\.so                                         u:object_r:same_process_hal_file:s0
 
-# Charger
-/vendor/bin/hw/vendor\.noth\.hardware\.charge-service                 u:object_r:hal_nt_charger_exec:s0
-
-# Fingerprint
-/dev/goodix_fp                                                              u:object_r:fingerprint_device:s0
-/vendor/bin/hw/android.hardware\.biometrics\.fingerprint-service\.nothing   u:object_r:hal_fingerprint_default_exec:s0
-
 # Lights
 /dev/led_strips    u:object_r:led_device:s0
 
 # NFC
 /odm/bin/init\.asteroids\.nfc\.sh                    u:object_r:vendor_qti_init_shell_exec:s0
 /vendor/bin/hw/android\.hardware\.nfc-service\.st    u:object_r:hal_nfc_default_exec:s0
-
-# NTF
-/dev/ntfeature             u:object_r:vendor_ntf_file:s0
-/vendor/bin/ntf-service    u:object_r:vendor_ntf_exec:s0
 
 # Partitions
 /dev/block/platform/soc/1d84000\.ufshc/by-name/vbmeta_vendor_[ab]    u:object_r:vendor_custom_ab_block_device:s0
@@ -47,10 +36,7 @@
 /dev/st54spi                                                        u:object_r:secure_element_device:s0
 /vendor/bin/hw/android\.hardware\.secure_element-service\.thales    u:object_r:hal_secure_element_default_exec:s0
 
-# Sensors
-/vendor/bin/hw/vendor\.noth\.hardware\.sensor\.sensor_extension-service    u:object_r:hal_sensors_default_exec:s0
-/vendor/bin/hw/android\.hardware\.sensors-service\.nothing-multihal             u:object_r:hal_sensors_default_exec:s0
-
+# Vibrator
 /dev/aac_richtap                                                           u:object_r:aac_richtap_device:s0
 /vendor/bin/hw/android\.hardware\.vibrator\.service\.asteroids      u:object_r:hal_vibrator_default_exec:s0
 

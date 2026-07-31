@@ -1,11 +1,2 @@
-# Charging
-vendor.noth.hardware.charge.ICharge/default     u:object_r:vendor_hal_charge_service:s0
-
-# Fingerprint
-vendor.goodix.hardware.biometrics.fingerprint.IGoodixFingerprintDaemon/default    u:object_r:hal_fingerprint_service:s0
-
 # QMS
 vendor.qti.qhcp.IQHDC/default                          u:object_r:vendor_hal_qms_service:s0
-
-# Sensors
-vendor.noth.hardware.sensor.sensor_extension.ISensorExtension/default    u:object_r:hal_sensors_service:s0
