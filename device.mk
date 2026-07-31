@@ -444,6 +444,7 @@ TP_SYSFS_PATH := /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.sp
 
 $(call soong_config_set,nothing_sensors,tp_single_tap_path,$(TP_SYSFS_PATH)/fts_gesture_single_tap_pressed)
 $(call soong_config_set,nothing_sensors,tp_single_tap_enabled_path,$(TP_SYSFS_PATH)/fts_gesture_single_tap_enabled)
+$(call soong_config_set,nothing_sensors,tp_single_tap_coords_path,/proc/touchpanel/gesture_code)
 
 $(call soong_config_set,nothing_sensors,tp_udfps_path,$(TP_SYSFS_PATH)/fts_fod_pressed)
 $(call soong_config_set,nothing_sensors,tp_udfps_enabled_path,$(TP_SYSFS_PATH)/fts_fod_enabled)
