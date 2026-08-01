@@ -6,14 +6,6 @@
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 $(call inherit-product, vendor/nothing/asteroids/asteroids-vendor.mk)
 $(call inherit-product-if-exists, hardware/dolby/dolby.mk)
-$(call inherit-product-if-exists, hardware/nothing/camera/ntcam.mk)
-
-# MatLog Logcat Viewer
-PRODUCT_PACKAGES += \
-    MatLog
-
-PRODUCT_COPY_FILES += \
-    packages/apps/MatLog/privapp-permissions-MatLog.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-MatLog.xml
 
 # Keys
 PRODUCT_DEFAULT_DEV_CERTIFICATE := vendor/lineage-priv/keys/releasekey
