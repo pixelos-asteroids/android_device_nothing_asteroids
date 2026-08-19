@@ -79,10 +79,14 @@
         <item>60</item>
     </integer-array>
 
-    <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx. -->
+    <!-- Indicate available ColorDisplayManager.COLOR_MODE_xxx.
+         0 = Natural, 1 = Boosted, 2 = Saturated, 3 = Automatic, 260 = Alive (default). -->
     <integer-array name="config_availableColorModes">
         <item>260</item>
         <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </integer-array>
 
     <!-- Messages that should not be shown to the user during face authentication, on keyguard.
