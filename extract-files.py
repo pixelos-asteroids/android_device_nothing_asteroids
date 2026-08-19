@@ -95,6 +95,8 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libui_shim.so'),
     'vendor/lib64/libntcamskia.so': blob_fixup()
         .add_needed('libnativewindow.so'),
+    'vendor/lib64/libperfgluelayer.so': blob_fixup()
+        .sig_replace('87 08 00 94', '1F 20 03 D5'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libbinder_shim.so')
         .add_needed('libhidlbase_shim.so'),
