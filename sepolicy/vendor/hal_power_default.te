@@ -1,0 +1,9 @@
+# Power HAL queries display state (e.g. refresh rate) via the QTI Display
+# Config HAL for boost decisions. A raw service_manager find allow trips
+# hal_attribute_service's own neverallow in
+# device/qcom/sepolicy_vndr/sm8650/generic/vendor/common/hal_graphics_composer_default.te
+# (it only exempts hal_graphics_composer_client/_server) - the macro's own
+# comment says to use hal_client_domain instead, which is the sanctioned
+# way in and grants access to both vendor_hal_displayconfig_service and
+# vendor_hal_vnddisplayconfig_service registered under that HAL attribute.
+hal_client_domain(hal_power_default, hal_graphics_composer)
