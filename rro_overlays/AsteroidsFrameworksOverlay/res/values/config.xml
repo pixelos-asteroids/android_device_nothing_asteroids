@@ -349,4 +349,15 @@
 
      <!-- The amount to scale fullscreen snapshots for Overview and snapshot starting windows. -->
      <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.7</item>
+
+     <!-- Default vibration intensities. The framework defaults these to 2 (MEDIUM), and
+          VibrationScaler attenuates waveform amplitudes accordingly. Since
+          config_vibration_supported_intensity_levels was reverted (the rt_ics vibrator HAL
+          discards EffectStrength), Settings exposes no picker and users cannot raise these,
+          leaving ring, alarm and notification vibrations permanently attenuated. Default them
+          to 3 (HIGH). Haptic feedback is deliberately left at the framework default of MEDIUM,
+          since short touch primitives are not perceptibly attenuated. -->
+     <integer name="config_defaultAlarmVibrationIntensity">3</integer>
+     <integer name="config_defaultRingVibrationIntensity">3</integer>
+     <integer name="config_defaultNotificationVibrationIntensity">3</integer>
 </resources>
