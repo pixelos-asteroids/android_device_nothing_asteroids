@@ -1,3 +1,7 @@
 # Allow libperfmgr to write CPU frequency scaling sysfs nodes
 allow hal_power_default sysfs_devices_system_cpu:file { open read write getattr };
 allow hal_power_default sysfs_devices_system_cpu:dir { open read search };
+
+# Allow the existing Power HAL to issue the bounded WALT scheduler boost.
+rw_dir_file(hal_power_default, proc_sched)
+allow hal_power_default proc_sched_walt:dir search;

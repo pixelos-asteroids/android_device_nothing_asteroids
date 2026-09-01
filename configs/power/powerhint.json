@@ -4,7 +4,8 @@
             "Name": " ClassKgslKgsl3d0DevfreqMinFreq",
             "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
             "Values": [
-                "264000000"
+                "264000000",
+                "510000000"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -36,6 +37,16 @@
             "Values": [
                 "1",
                 "3"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": " SysWaltSchedBoost",
+            "Path": "/proc/sys/walt/sched_boost",
+            "Values": [
+                "0",
+                "2"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -264,9 +275,45 @@
         },
         {
             "PowerHint": "INTERACTION",
+            "Node": " SysWaltSchedBoost",
+            "Value": "2",
+            "Duration": 0
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": " ClassKgslKgsl3d0DevfreqMinFreq",
+            "Value": "510000000",
+            "Duration": 200
+        },
+        {
+            "PowerHint": "INTERACTION",
             "Node": "LittleClusterMinFreq",
-            "Value": "1497600",
-            "Duration": 300
+            "Value": "1593600",
+            "Duration": 650
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": " DevicesSystemCpuBusDcvsDdr24091000QcomBwmonDdrMinFreq",
+            "Value": "681000",
+            "Duration": 750
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": " DevicesSystemCpuCpu0CoreCtlMinCpus",
+            "Value": "3",
+            "Duration": 750
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": " SysWaltSchedBoost",
+            "Value": "2",
+            "Duration": 750
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "LittleClusterMinFreq",
+            "Value": "1593600",
+            "Duration": 750
         },
         {
             "PowerHint": "LAUNCH",
