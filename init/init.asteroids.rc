@@ -83,9 +83,6 @@ on property:sys.boot_completed=1
     chown system system /proc/charger/nt_otg_enable
     chmod 0664 /proc/charger/nt_otg_enable
 
-    # Enable PowerHAL hint processing
-    setprop vendor.powerhal.init 1
-
 on property:sys.touch.pocket_mode=*
     write /proc/touchpanel/pocket_mode ${sys.touch.pocket_mode}
 
