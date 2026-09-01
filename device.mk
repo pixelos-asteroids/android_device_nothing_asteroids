@@ -446,6 +446,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Storage
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# Task profiles
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+
 # Telephony
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
