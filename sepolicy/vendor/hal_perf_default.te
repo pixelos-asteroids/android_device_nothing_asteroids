@@ -1,1 +1,6 @@
 r_dir_file(vendor_hal_perf_default, system_server)
+r_dir_file(vendor_hal_perf_default, hal_power_default)
+rw_dir_file(vendor_hal_perf_default, proc_sched)
+
+r_dir_file(vendor_hal_perf_default, proc_sched_walt)
+allow vendor_hal_perf_default proc_sched_walt:file rw_file_perms;
