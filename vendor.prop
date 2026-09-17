@@ -57,6 +57,15 @@ ro.camera.enableCamera1MaxZsl=1
 ro.camera.disableHeicUltraHDR=true
 
 # Display 
+ro.vendor.display.normal.maxbacklight=3442
+ro.vendor.display.normal.minbacklight=50
+ro.vendor.display.hbm.maxbacklight=4095
+ro.vendor.display.safe.backlight=2946
+ro.vendor.display.array.hbm.minlux=7000,18000,38000
+ro.vendor.display.array.hbm.maxlux=8000,20000,40000
+ro.vendor.display.array.hbm.backlight=3442,3682,4094
+ro.vendor.display.low_brightness_threshold=0.345
+ro.vendor.display.thermal_limit_brightness=4095,3877,3610,3442,2946,2802,2659,2494,2340,2161,1961
 vendor.display.comp_mask=0
 vendor.display.disable_3d_adaptive_tm=1
 vendor.display.disable_cwb_idle_fallback=1
@@ -69,14 +78,23 @@ vendor.display.disable_scaler=0
 vendor.display.disable_sdr_dimming=0
 vendor.display.disable_sdr_histogram=1
 vendor.display.disable_stc_dimming=1
+vendor.display.enable_async_powermode=0
 vendor.display.enable_async_vds_creation=1
+vendor.display.enable_display_extensions=1
 vendor.display.enable_dpps_dynamic_fps=1
+vendor.display.enable_early_wakeup=1
 vendor.display.enable_hdr10_gpu_target=1
+vendor.display.enable_ic_hw_roundedcorner=1
 vendor.display.enable_optimize_refresh=0
-vendor.display.enable_rounded_corner=1
+vendor.display.enable_rc_support=1
+vendor.display.enable_rounded_corner=0
+vendor.display.use_layer_ext=1
+vendor.display.use_smooth_motion=0
 vendor.display.vds_allow_hwc=1
 vendor.gralloc.disable_ubwc=0
 vendor.gralloc.enable_logs=0
+ro.vendor.display.panel.type=Flexible_AMOLED
+ro.vendor.display.set_doze_fps_modeid=3
 
 # DPM
 persist.vendor.dpm.vndr.feature=11
@@ -104,6 +122,7 @@ debug.sf.early.sf.duration=12333333
 debug.sf.earlyGl.app.duration=13666666
 debug.sf.earlyGl.sf.duration=12333333
 debug.sf.enable_adpf_cpu_hint=true
+debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
 debug.sf.late.app.duration=13666666
 debug.sf.late.sf.duration=12333333
@@ -111,6 +130,7 @@ debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
 persist.sys.sf.native_mode=260
+ro.surface_flinger.clear_slots_with_set_layer_buffer=false
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.game_default_frame_rate_override=60
 ro.surface_flinger.has_HDR_display=true
@@ -118,8 +138,8 @@ ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.protected_contents=true
-ro.surface_flinger.set_idle_timer_ms=2000
-ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.set_idle_timer_ms=3000
+ro.surface_flinger.set_touch_timer_ms=1000
 ro.surface_flinger.supports_background_blur=1
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.use_content_detection_for_refresh_rate=true
@@ -141,6 +161,7 @@ vendor.qc2audio.suspend.enabled=true
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.perf-hal.ver=3.0
 vendor.perf.framepacing.enable=1
 vendor.pasr.activemode.enabled=true
 

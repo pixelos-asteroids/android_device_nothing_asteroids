@@ -5,3 +5,9 @@ allow hal_power_default sysfs_devices_system_cpu:dir { open read search };
 # Allow the existing Power HAL to issue the bounded WALT scheduler boost.
 rw_dir_file(hal_power_default, proc_sched)
 allow hal_power_default proc_sched_walt:dir search;
+
+# Allow Power HAL to connect to QTI perf2 HAL as a client
+hal_client_domain(hal_power_default, vendor_hal_perf)
+allow hal_power_default vendor_hal_perf2_service:service_manager find;
+binder_call(hal_power_default, vendor_hal_perf_default)
+binder_call(vendor_hal_perf_default, hal_power_default)
