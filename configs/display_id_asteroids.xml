@@ -4,170 +4,112 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <displayConfiguration>
-    <screenBrightnessRampFastDecrease>0.5</screenBrightnessRampFastDecrease>
-
-    <screenBrightnessRampFastIncrease>0.5</screenBrightnessRampFastIncrease>
-
-    <screenBrightnessRampSlowDecrease>0.05</screenBrightnessRampSlowDecrease>
-
-    <screenBrightnessRampSlowIncrease>0.05</screenBrightnessRampSlowIncrease>
-
-    <screenBrightnessMap>
+    <screenBrightnessMap interpolation="linear">
         <point>
-            <value>0.0000</value>
-            <nits>7.0</nits>
+            <value>0.0</value>
+            <nits>2.0</nits>
         </point>
         <point>
-            <value>0.13459</value>
-            <nits>14.0</nits>
+            <value>0.032723</value>
+            <nits>3.0</nits>
         </point>
         <point>
-            <value>0.20469</value>
-            <nits>34.0</nits>
+            <value>0.081074</value>
+            <nits>6.0</nits>
         </point>
         <point>
-            <value>0.28994</value>
-            <nits>70.0</nits>
+            <value>0.110379</value>
+            <nits>10.0</nits>
         </point>
         <point>
-            <value>0.31534</value>
-            <nits>84.0</nits>
+            <value>0.160928</value>
+            <nits>20.0</nits>
         </point>
         <point>
-            <value>0.32706</value>
-            <nits>90.0</nits>
+            <value>0.246642</value>
+            <nits>50.0</nits>
         </point>
         <point>
-            <value>0.36395</value>
-            <nits>111.0</nits>
+            <value>0.345055</value>
+            <nits>100.0</nits>
         </point>
         <point>
-            <value>0.39595</value>
-            <nits>132.0</nits>
+            <value>0.478877</value>
+            <nits>200.0</nits>
         </point>
         <point>
-            <value>0.41353</value>
-            <nits>145.0</nits>
+            <value>0.571429</value>
+            <nits>300.0</nits>
         </point>
         <point>
-            <value>0.45579</value>
-            <nits>178.0</nits>
+            <value>0.649328</value>
+            <nits>400.0</nits>
         </point>
         <point>
-            <value>0.49072</value>
-            <nits>211.0</nits>
-        </point>
-        <point>
-            <value>0.52614</value>
-            <nits>248.0</nits>
-        </point>
-        <point>
-            <value>0.58476</value>
-            <nits>318.0</nits>
-        </point>
-        <point>
-            <value>0.60503</value>
-            <nits>344.0</nits>
-        </point>
-        <point>
-            <value>0.71959</value>
+            <value>0.719414</value>
             <nits>500.0</nits>
         </point>
         <point>
-            <value>0.84074</value>
-            <nits>800.0</nits>
+            <value>0.840537</value>
+            <nits>700.0</nits>
+        </point>
+        <point>
+            <value>0.99976</value>
+            <nits>1190.0</nits>
         </point>
         <point>
             <value>1.0</value>
-            <nits>1300.0</nits>
+            <nits>2700.0</nits>
         </point>
     </screenBrightnessMap>
-
     <highBrightnessMode enabled="true">
-        <!-- Brightness level at which we transition from normal to high-brightness. -->
-        <transitionPoint>0.84074</transitionPoint>
-        <!-- Minimum lux needed to enter high brightness mode. -->
-        <minimumLux>7000</minimumLux>
-        <thermalStatusLimit>light</thermalStatusLimit>
-        <allowDefaultBrightnessOverride>false</allowDefaultBrightnessOverride>
+        <transitionPoint>0.6</transitionPoint>
+        <minimumLux>7500.0</minimumLux>
         <timing>
-            <!-- Window in which we restrict HBM. -->
+            <!-- allow for 5 minutes out of every 30 minutes -->
             <timeWindowSecs>1800</timeWindowSecs>
-            <!-- Maximum time of HBM allowed in that window. -->
             <timeMaxSecs>300</timeMaxSecs>
-            <!-- Minimum time remaining required to switch HBM on for. -->
-            <timeMinSecs>0</timeMinSecs>
+            <timeMinSecs>60</timeMinSecs>
         </timing>
-        <!-- Whether HBM is allowed when lower power mode is active. -->
-        <allowInLowPowerMode>false</allowInLowPowerMode>
-        <!-- Minimum HDR video size to enter high brightness mode. -->
         <minimumHdrPercentOfScreen>0.2</minimumHdrPercentOfScreen>
-        <!-- This LUT specifies how to boost HDR brightness at given SDR brightness (nits). -->
+        <!--sdrHdrRatioMap, backed by spline, must have at least two entries -->
         <sdrHdrRatioMap>
             <point>
                 <sdrNits>2.0</sdrNits>
-                <hdrRatio>8.0</hdrRatio>
-            </point>
-            <point>
-                <sdrNits>10.0</sdrNits>
-                <hdrRatio>8.0</hdrRatio>
-            </point>
-            <point>
-                <sdrNits>50.0</sdrNits>
-                <hdrRatio>7.0</hdrRatio>
-            </point>
-            <point>
-                <sdrNits>100.0</sdrNits>
-                <hdrRatio>6.0</hdrRatio>
-            </point>
-            <point>
-                <sdrNits>200.0</sdrNits>
-                <hdrRatio>5.0</hdrRatio>
-            </point>
-            <point>
-                <sdrNits>300.0</sdrNits>
-                <hdrRatio>4.5</hdrRatio>
-            </point>
-            <point>
-                <sdrNits>400.0</sdrNits>
-                <hdrRatio>4.25</hdrRatio>
-            </point>
-            <point>
-                <sdrNits>500.0</sdrNits>
                 <hdrRatio>4.0</hdrRatio>
             </point>
             <point>
-                <sdrNits>800.0</sdrNits>
-                <hdrRatio>3.75</hdrRatio>
+                <sdrNits>10.0</sdrNits>
+                <hdrRatio>5.0</hdrRatio>
             </point>
             <point>
-                <sdrNits>1300.0</sdrNits> 
-                <hdrRatio>2.3</hdrRatio>
+                <sdrNits>50.0</sdrNits>
+                <hdrRatio>5.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>100.0</sdrNits>
+                <hdrRatio>5.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>200.0</sdrNits>
+                <hdrRatio>4.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>300.0</sdrNits>
+                <hdrRatio>3.0</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>400.0</sdrNits>
+                <hdrRatio>2.5</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>500.0</sdrNits>
+                <hdrRatio>2.2</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>700.0</sdrNits>
+                <hdrRatio>1.7</hdrRatio>
             </point>
         </sdrHdrRatioMap>
     </highBrightnessMode>
-    <thermalThrottling>
-        <throttlingMap>
-            <map>
-                <thermalStatus>light</thermalStatus>
-                <brightness>0.92000</brightness> 
-            </map>
-            <map>
-                <thermalStatus>moderate</thermalStatus>
-                <brightness>0.84074</brightness>
-            </map>
-            <map>
-                <thermalStatus>severe</thermalStatus>
-                <brightness>0.71959</brightness>
-            </map>
-            <map>
-                <thermalStatus>critical</thermalStatus>
-                <brightness>0.60503</brightness>
-            </map>
-            <map>
-                <thermalStatus>emergency</thermalStatus>
-                <brightness>0.36395</brightness>
-            </map>
-        </throttlingMap>
-    </thermalThrottling>
 </displayConfiguration>
