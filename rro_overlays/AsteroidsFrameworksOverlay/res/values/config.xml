@@ -190,7 +190,7 @@
     <bool name="config_screen_off_udfps_enabled">true</bool>
 
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
-    <bool name="config_zramWriteback">true</bool>
+    <bool name="config_zramWriteback">false</bool>
 
     <!-- Screen brightness used to dim the screen when the user activity
          timeout expires.  May be less than the minimum allowed brightness setting
