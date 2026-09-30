@@ -409,11 +409,11 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
                 <route type="mix" sink="Earpiece"
                        sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,Telephony Rx"/>
                 <route type="mix" sink="Speaker"
-                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,Telephony Rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,spatial output,Telephony Rx"/>
                 <route type="mix" sink="Wired Headset"
-                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,Telephony Rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,spatial output,Telephony Rx"/>
                 <route type="mix" sink="Wired Headphones"
-                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,Telephony Rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,spatial output,Telephony Rx"/>
                 <route type="mix" sink="Line"
                        sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,Telephony Rx"/>
                 <route type="mix" sink="HDMI"
@@ -435,7 +435,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
                 <route type="mix" sink="USB Device Out"
                        sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,hifi_playback,Telephony Rx"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,hifi_playback,Telephony Rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,hifi_playback,spatial output,Telephony Rx"/>
                 <route type="mix" sink="Telephony Tx"
                        sources="voice_tx,incall_music_uplink"/>
                 <route type="mix" sink="voice_rx"
@@ -459,9 +459,9 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
                 <route type="mix" sink="BT A2DP Headphones"
                        sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,spatial output"/>
                 <route type="mix" sink="BT A2DP Speaker"
-                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,spatial output"/>
                 <route type="mix" sink="BT BLE Speaker"
-                       sources="primary output,mmap_no_irq_out,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+                       sources="primary output,mmap_no_irq_out,deep_buffer,direct_pcm,compressed_offload,voip_rx,spatial output"/>
                 <route type="mix" sink="BT BLE Broadcast"
                        sources="primary output,deep_buffer,direct_pcm,compressed_offload"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In,USB Headset In" />
